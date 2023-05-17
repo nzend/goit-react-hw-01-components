@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/react-homework-template/static/js/main.07d3183d.js",
-    "index.html": "/react-homework-template/index.html",
-    "main.07d3183d.js.map": "/react-homework-template/static/js/main.07d3183d.js.map"
+    "main.js": "/nzend/goit-react-hw-01-components.git/static/js/main.07d3183d.js",
+    "index.html": "/nzend/goit-react-hw-01-components.git/index.html",
+    "main.07d3183d.js.map": "/nzend/goit-react-hw-01-components.git/static/js/main.07d3183d.js.map"
   },
   "entrypoints": [
     "static/js/main.07d3183d.js"
