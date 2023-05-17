@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/nzend/goit-react-hw-01-components.git/static/js/main.07d3183d.js",
-    "index.html": "/nzend/goit-react-hw-01-components.git/index.html",
-    "main.07d3183d.js.map": "/nzend/goit-react-hw-01-components.git/static/js/main.07d3183d.js.map"
+    "main.js": "/goit-react-hw-01-components/static/js/main.07d3183d.js",
+    "index.html": "/goit-react-hw-01-components/index.html",
+    "main.07d3183d.js.map": "/goit-react-hw-01-components/static/js/main.07d3183d.js.map"
   },
   "entrypoints": [
     "static/js/main.07d3183d.js"
