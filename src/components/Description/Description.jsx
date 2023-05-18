@@ -1,15 +1,22 @@
 import PropTypes from 'prop-types';
 
-import css from './Description.module.css';
+// import css from './Description.module.css';
+import {
+  DescriptionBox,
+  Avatar,
+  Name,
+  Tag,
+  Location,
+} from './Description.styled';
 
 export const Description = ({ avatar, username, tag, location }) => {
   return (
-    <>
-      <img src={avatar} alt={username} className={css.avatar} />
-      <p className="name">{username}</p>
-      <p className="tag">@{tag}</p>
-      <p className="location">{location}</p>
-    </>
+    <DescriptionBox>
+      <Avatar src={avatar} alt={username} />
+      <Name className="name">{username}</Name>
+      <Tag className="tag">@{tag}</Tag>
+      <Location className="location">{location}</Location>
+    </DescriptionBox>
   );
 };
 Description.propTypes = {
