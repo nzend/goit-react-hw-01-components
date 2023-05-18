@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
-import css from './StatList.module.css';
+import { StatsList } from './StatList.styled';
 import { Stats } from 'components/Stats/Stats';
 
 export const StatList = ({ data }) => {
   return (
-    <ul className={css.statlist}>
+    <StatsList >
       {data.map(({ id, label, percentage }) => (
         <Stats key={id} label={label} percentage={percentage}></Stats>
       ))}
-    </ul>
+    </StatsList>
   );
 };
 StatList.propTypes = {

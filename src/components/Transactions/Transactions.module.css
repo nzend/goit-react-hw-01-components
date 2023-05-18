@@ -6,6 +6,8 @@ table {
   box-shadow: 0 0 10px #c6cccced;
   width: 370px;
   border-spacing: 0;
+  margin-right: auto;
+  margin-left: auto;
 }
 thead tr {
   margin-bottom: 5px;
@@ -35,4 +37,3 @@ table tr {
 table tr:not(:last-child) {
   margin-bottom: 5px;
 }
-  

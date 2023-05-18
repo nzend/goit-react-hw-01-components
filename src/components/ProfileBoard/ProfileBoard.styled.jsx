@@ -10,4 +10,6 @@ export const ProfileContainer = styled.div`
   width: 370px;
   box-shadow: 0 0 10px #c6cccced;
   border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
 `;

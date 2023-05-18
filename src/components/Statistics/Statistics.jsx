@@ -1,15 +1,17 @@
 import PropTypes from 'prop-types';
 
-import css from './Statistics.module.css';
+import { StatisticsContainer } from './Statistics.styled';
 import { Title } from '../Title/Title';
 import { StatList } from 'components/StatList/StatList';
+console.log(Title.length);
 
 export const Statistics = ({ data }) => {
   return (
-    <div className={css.statistics}>
-      <Title text="Upload Stats"></Title>
+    <StatisticsContainer>
+      {Title.length > 0 && <Title text="Upload Stats"></Title>}
+
       <StatList data={data}></StatList>
-    </div>
+    </StatisticsContainer>
   );
 };
 Statistics.propTypes = {
