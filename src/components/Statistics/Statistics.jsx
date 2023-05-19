@@ -1,25 +1,35 @@
-import PropTypes from 'prop-types';
+import {
+  StatisticsSection,
+  Title,
+  StatsList,
+  StatsItem,
+  Label,
+  Percentage,
+} from './Statistics.styled';
+import propTypes from 'prop-types';
 
-import { StatisticsContainer } from './Statistics.styled';
-import { Title } from '../Title/Title';
-import { StatList } from 'components/StatList/StatList';
-console.log(Title.length);
+import { createColor } from '../../utils/createColor';
 
-export const Statistics = ({ data }) => {
+export const Statistics = ({ title, data }) => {
   return (
-    <StatisticsContainer>
-      {Title.length > 0 && <Title text="Upload Stats"></Title>}
+    <StatisticsSection>
+      {title && <Title>{title}</Title>}
 
-      <StatList data={data}></StatList>
-    </StatisticsContainer>
+      <StatsList>
+        {data.map(({ id, label, percentage }) => {
+          return (
+            <StatsItem key={id} style={{ backgroundColor: createColor() }}>
+              <Label>{label}</Label>
+              <Percentage>{percentage}</Percentage>
+            </StatsItem>
+          );
+        })}
+      </StatsList>
+    </StatisticsSection>
   );
 };
+
 Statistics.propTypes = {
-  data: PropTypes.arrayOf(
-    PropTypes.exact({
-      id: PropTypes.string.isRequired,
-      label: PropTypes.string.isRequired,
-      percentage: PropTypes.number.isRequired,
-    })
-  ),
+  label: propTypes.string.isRequired,
+  percentage: propTypes.number.isRequired,
 };

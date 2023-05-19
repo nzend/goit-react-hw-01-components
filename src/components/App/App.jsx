@@ -1,21 +1,27 @@
-import { ProfileBoard } from 'components/ProfileBoard/ProfileBoard';
+import { Profile } from 'components/Profile/Profile';
 import { Statistics } from 'components/Statistics/Statistics';
 import { FriendList } from 'components/FriendList/FriendList';
 import { Transactions } from 'components/Transactions/Transactions';
 
-import user from '../../user.json';
-import data from '../../data.json';
-import friends from '../../friends.json';
-import transactions from '../../transactions.json';
+import user from '../../data/user.json';
+import data from '../../data/data.json';
+import friends from '../../data/friends.json';
+import transactions from '../../data/transactions.json';
 
 import { Container } from './App.styled';
 export const App = () => {
   return (
     <Container>
-      <ProfileBoard user={user}></ProfileBoard>
-      <Statistics data={data}></Statistics>
+      <Profile
+        username={user.username}
+        tag={user.tag}
+        location={user.location}
+        avatar={user.avatar}
+        stats={user.stats}
+      ></Profile>
+      <Statistics title="Upload stats" data={data}></Statistics>
       <FriendList friends={friends}></FriendList>
-      <Transactions transactions={transactions}></Transactions>
+      <Transactions items={transactions}></Transactions>
     </Container>
   );
 };
